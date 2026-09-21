@@ -1,0 +1,69 @@
+# ============================================================
+# 原则：只入库手写源码。凭据 / 会话 / 采集结果 / 逆向产物一律不入库。
+# ============================================================
+
+# ---------- 凭据：真实地址与口令的唯一存放处 ----------
+xunjian_config.local.js
+*.local.json
+*.local.js
+*credential*
+*.pem
+*.key
+
+# ---------- 会话（含 cookie / token，等价于密码）----------
+# 注意：只匹配会话【数据】文件。早期写成 `*session*` 会把 session_keepalive.js /
+# session_activate.js / session_log.js 这三个源码文件一起挡在库外。
+*_session.json
+*session[0-9]*.json
+hs_session.json
+hs_admin_session.json
+lousao_session.json
+ues_session.json
+aidsc_session.json
+ltb_session.json
+apt_session*.json
+anheng_cloud_session.json
+*_cookies.json
+*cookie*.json
+
+# ---------- 采集结果 / 报表输出 ----------
+xunjian_report.json
+xunjian_report_table.md
+xunjian_report_table.csv
+anheng_collected.json
+anheng_cloud_cookies.json
+apt_flow_peak.json
+*.log
+
+# ---------- 备份 ----------
+*.bak
+*.orig
+*.old
+*~
+
+# ---------- 依赖 / 缓存 ----------
+node_modules/
+__pycache__/
+*.pyc
+
+# ---------- 从设备抓下来的前端打包产物（非手写源码）----------
+*_js/
+*-index.js
+ues_app.js
+hs-app.js
+chunk-*.js
+vendors.js
+umi.js
+
+# ---------- 临时调试产物 ----------
+_*
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.csv
+*.xml
+*.html
+*.lock

@@ -1,0 +1,19 @@
+{
+  "name": "xunjian",
+  "version": "1.0.0",
+  "private": true,
+  "description": "安恒 / DBAPP 系安全设备批量巡检：登录、采集资源利用率与版本授权，输出 Markdown/CSV 报表",
+  "main": "xunjian_all.js",
+  "scripts": {
+    "sweep": "node xunjian_all.js --write-app",
+    "table": "node xunjian_table.js",
+    "keepalive": "node session_keepalive.js",
+    "cloud": "node anheng_cloud_collect.js"
+  },
+  "dependencies": {
+    "playwright-core": "^1.62.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
